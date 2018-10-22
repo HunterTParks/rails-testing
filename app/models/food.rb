@@ -1,4 +1,4 @@
 class Food < ApplicationRecord
-  validates :name
+  validates :name, presence: true
   belongs_to :type
 end
