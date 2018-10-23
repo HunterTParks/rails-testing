@@ -1,9 +1,9 @@
 <h1>New</h1>
 
-<%= form_tag("/food", method: "post") do %>
-  <%= label_tag(:name, "Name: ") %>
-  <%= text_field_tag(:name) %>
-  <%= label_tag(:description, "Description: ") %>
-  <%= text_field_tag(:description) %>
-  <%= submit_tag %>
+<%= form_for @food, url: {action: "create"} do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label "Description" %>
+  <%= f.text_field :description %>
+  <%= f.submit "Submit" %>
 <% end %>
